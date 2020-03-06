@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core'
-import { BranchService } from '../shared/branch.service'
-import { ToastrService } from '../common/toastr.service'
-import { Location } from '@angular/common'
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router'; 
+import { BranchService } from '../shared/branch.service';
+import { ToastrService } from '../common/toastr.service';
+import { Location } from '@angular/common';
 
 @Component({
     selector: 'branch-list',
@@ -11,11 +12,12 @@ import { Location } from '@angular/common'
 export class BranchesComponent {
     branches: any[]
 
-    constructor(private branchService:BranchService, private toastr: ToastrService, private loc: Location) {
+    constructor(private branchService:BranchService, private toastr: ToastrService, private loc: Location, private route:ActivatedRoute) {
     }   
 
-    ngOnInit() {
-        this.branches = this.branchService.getBranches();
+    ngOnInit() {        
+        this.branchService.branches = this.route.snapshot.data["branches"];
+        this.branches = this.branchService.getBranches(); 
     }
 
     handleUpVoteClick(branch) {

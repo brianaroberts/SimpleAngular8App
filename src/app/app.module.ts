@@ -13,6 +13,7 @@ import { BranchThumbnailComponent } from './BranchComponents/branchThumbnail.com
 import { AppFooterComponent } from './appFooter.component';
 import { Error404Component } from './errors/404.component';
 import { BranchRouteActivator } from './shared/branch-route-activator.service';
+import { BranchesResolver } from './BranchComponents/branches-resolver.service';
 
 @NgModule({
   // Components, Pipes, and directives go here!
@@ -35,6 +36,7 @@ import { BranchRouteActivator } from './shared/branch-route-activator.service';
   providers: [
     BranchService,
     BranchRouteActivator,
+    BranchesResolver,
     ToastrService
   ],
   bootstrap: [AppComponent]
