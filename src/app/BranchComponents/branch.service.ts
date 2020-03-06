@@ -29,7 +29,7 @@ export class BranchService {
         return this.branches; 
     }
         
-    getBranch(branchId:number) {
+    getBranch(branchId:number):IBranch {
         //console.log(this.branches); 
         return this.branches.find(branch => branch.id === branchId)
     }

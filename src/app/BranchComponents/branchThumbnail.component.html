@@ -6,9 +6,10 @@
     </div>
     <br/>
     <div style="text-align: center">
-        <button class='btn btn-success' (click)="handleUpVoteClick(branch)">UP</button>
+        <button class='btn btn-success glyphicon glyphicon-arrow-up' (click)="handleUpVoteClick(branch)"></button>
         &nbsp;
-        <button type="button" class='btn btn-danger' (click)="handleDownVoteClick(branch)">DOWN</button>
+        <button type="button" class='btn btn-danger glyphicon glyphicon-arrow-down' (click)="handleDownVoteClick(branch)"></button>
+        Votes: {{branch?.votes}}
     </div>
 </div>
  

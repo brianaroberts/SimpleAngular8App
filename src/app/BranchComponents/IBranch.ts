@@ -10,4 +10,5 @@ export interface IBranch {
     description: string
     areaOfResponsibility: string
     chiefOfStaff: string
+    votes: number
 }

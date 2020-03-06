@@ -1,5 +1,5 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core'
-import { IBranch } from './IBranch'
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { IBranch } from './IBranch';
 
 @Component({
     selector: 'branch-thumbnail', 
@@ -22,11 +22,23 @@ export class BranchThumbnailComponent {
 
     handleUpVoteClick(branch: IBranch) {
         //console.log("button clicked!")
-        this.upVoteClick.emit(branch)
+        this.upVoteClick.emit(branch);
+        if (isNaN(branch?.votes))
+        {
+            branch.votes=1; 
+        } else {
+            branch.votes++; 
+        }
     }
 
     handleDownVoteClick(branch: IBranch) {
         //console.log("button clicked!")
-        this.downVoteClick.emit(branch)
+        this.downVoteClick.emit(branch);
+        if (isNaN(branch?.votes))
+        {
+            branch.votes=-1; 
+        } else {
+            branch.votes--; 
+        }
     }   
 }  
