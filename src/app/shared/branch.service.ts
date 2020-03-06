@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'; 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators'; 
-import { AnyARecord } from 'dns';
 
 const httpOptions = {
     headers: new HttpHeaders({ "Content-Type": "application/json", "Authorization": "c31z" })
@@ -23,11 +22,14 @@ export class BranchService {
     }
 
     getBranches() {
+        if (!(this.branches?.length > 0)) {
+            //TODO: We need to load up branches here!
+        }
         return this.branches; 
     }
         
     getBranch(branchId:number) {
-        console.log(this.branches); 
+        //console.log(this.branches); 
         return this.branches.find(branch => branch.id === branchId)
     }
 }

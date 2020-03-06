@@ -1,7 +1,7 @@
 <div class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a [routerLink]="['/']" class="navbar-brand" >United States Military</a>
+      <a [routerLink]="['/branches']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="navbar-brand" >United States Military</a>
     </div>
 
     <div class="collapse navbar-collapse">
@@ -13,7 +13,7 @@
           </a>
           <ul class="dropdown-menu">
             <li *ngFor="let branch of branches">
-              <a [routerLink]="['/details', branch.id]">{{branch.name}}</a>
+              <a [routerLink]="['/details', branch.id]" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">{{branch.name}}</a>
             </li>
           </ul>
         </li>
@@ -21,7 +21,7 @@
       <div class="navbar-header navbar-right">
         <ul class="nav navbar-nav">
           <li>
-            <a>Welcome Patriot!</a>
+            <a [routerLink]="['/user/profile']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Welcome Patriot!</a>
           </li>
         </ul>
       </div>

@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: 'branches', component: BranchesComponent, resolve: {branches: BranchesResolver} },
   { path: 'details/:id', component: BranchDetailsComponent, canActivate: [BranchRouteActivator] },
   { path: '404', component: Error404Component },
-  { path: '', redirectTo: '/branches', pathMatch: 'full' }
+  { path: '', redirectTo: '/branches', pathMatch: 'full' },
+  { path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) }
 ];
 
 @NgModule({
