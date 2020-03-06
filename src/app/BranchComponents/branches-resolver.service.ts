@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Resolve } from '@angular/router'; 
-import { BranchService } from '../shared/branch.service';
+import { BranchService } from './branch.service';
 import { map } from 'rxjs/operators'; 
 
 @Injectable()

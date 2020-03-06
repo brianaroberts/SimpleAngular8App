@@ -5,15 +5,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav/navbar.component'
-import { BranchService } from './shared/branch.service';
 import { ToastrService } from './common/toastr.service';
-import { BranchesComponent } from './BranchComponents/branches.component';
-import { BranchDetailsComponent } from './BranchComponents/branchDetails.component';
-import { BranchThumbnailComponent } from './BranchComponents/branchThumbnail.component';
+
+import {
+  BranchService,
+  BranchesComponent,
+  BranchDetailsComponent,
+  BranchThumbnailComponent,
+  BranchRouteActivator,
+  BranchesResolver
+} from './BranchComponents/index'; 
+
 import { AppFooterComponent } from './appFooter.component';
 import { Error404Component } from './errors/404.component';
-import { BranchRouteActivator } from './shared/branch-route-activator.service';
-import { BranchesResolver } from './BranchComponents/branches-resolver.service';
 
 @NgModule({
   // Components, Pipes, and directives go here!

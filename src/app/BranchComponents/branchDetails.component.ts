@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'; 
 import { Router } from '@angular/router'; 
 
-import { BranchService } from '../shared/branch.service'; 
+import { BranchService } from './branch.service'; 
+import { IBranch } from './IBranch';
 
 @Component({    
     selector: 'branch-details',                            // We are using routing so the selector is just there for non routing cases
@@ -15,7 +16,7 @@ import { BranchService } from '../shared/branch.service';
 })
 
 export class BranchDetailsComponent {
-    branch: any;
+    branch: IBranch;
 
     constructor(private router: Router, private branchService: BranchService, private route:ActivatedRoute)
     {

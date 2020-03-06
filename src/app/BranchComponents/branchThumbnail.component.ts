@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core'
+import { IBranch } from './IBranch'
 
 @Component({
     selector: 'branch-thumbnail', 
@@ -19,13 +20,13 @@ export class BranchThumbnailComponent {
     
     constructor() {}
 
-    handleUpVoteClick(branch) {
+    handleUpVoteClick(branch: IBranch) {
         //console.log("button clicked!")
         this.upVoteClick.emit(branch)
     }
 
-    handleDownVoteClick(branch) {
+    handleDownVoteClick(branch: IBranch) {
         //console.log("button clicked!")
         this.downVoteClick.emit(branch)
     }   
-} 
+}  

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BranchService } from '../shared/branch.service';
+import { BranchService } from '../BranchComponents/branch.service';
 
 @Component({
     selector: 'nav-bar',

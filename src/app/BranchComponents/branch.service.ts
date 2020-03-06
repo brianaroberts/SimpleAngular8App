@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'; 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators'; 
+import { IBranch } from './IBranch';
 
 const httpOptions = {
     headers: new HttpHeaders({ "Content-Type": "application/json", "Authorization": "c31z" })
@@ -9,7 +10,7 @@ const httpOptions = {
 
 @Injectable()
 export class BranchService {
-    branches: any[];
+    branches: IBranch[];
     
     constructor (private httpClient: HttpClient, private route:ActivatedRoute) { 
         

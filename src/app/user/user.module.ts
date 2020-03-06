@@ -1,3 +1,4 @@
+// This module is lazy loaded...see app.module.ts
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common'; 
 import { RouterModule } from '@angular/router'; 

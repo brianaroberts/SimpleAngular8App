@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { BranchesComponent } from './BranchComponents/branches.component';
 import { BranchDetailsComponent } from './BranchComponents/branchDetails.component';
 import { Error404Component } from './errors/404.component';
-import { BranchRouteActivator } from './shared/branch-route-activator.service';
+import { BranchRouteActivator } from './BranchComponents/branch-route-activator.service';
 import { BranchesResolver } from './BranchComponents/branches-resolver.service';
 
 const routes: Routes = [

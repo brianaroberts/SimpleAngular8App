@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'; 
-import { BranchService } from '../shared/branch.service';
+import { BranchService } from './branch.service';
 import { ToastrService } from '../common/toastr.service';
 import { Location } from '@angular/common';
+import { IBranch } from './IBranch';
 
 @Component({
     selector: 'branch-list',
@@ -10,7 +11,7 @@ import { Location } from '@angular/common';
 })
 
 export class BranchesComponent {
-    branches: any[]
+    branches: IBranch[]
 
     constructor(private branchService:BranchService, private toastr: ToastrService, private loc: Location, private route:ActivatedRoute) {
     }   
