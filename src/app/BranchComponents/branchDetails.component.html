@@ -1,0 +1,23 @@
+<div class='container'>
+    <img [src]="branch?.imageUrl" [title]="'Seal of the ' + branch?.name" class="mil-seal-image">
+
+    <div class="row">
+    <div class="col-md-11">
+      <h2>{{branch?.name}} </h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-9">
+      <div><strong>Year Founded:</strong> {{branch?.yearFounded}}</div>
+      <div><strong>Number of Personell:</strong> {{branch?.numPeople}}</div>
+      <div><strong>Annual Budget:</strong> ${{branch?.budget}}</div>
+      <div><strong>Founding President:</strong> {{branch?.foundingPresident}}</div>
+      <div><strong>Area of Responsibility:</strong> {{branch?.areaOfResponsibility}}</div>
+      <div><strong>Chief of Staff:</strong> {{branch?.chiefOfStaff}}</div>
+      <div><strong>Description:</strong> {{branch?.description}}</div>
+    </div>   
+  </div>
+  <br/>
+  <button class="btn btn-primary" (click)="handleButtonGoBack()">Go Back</button>
+</div>

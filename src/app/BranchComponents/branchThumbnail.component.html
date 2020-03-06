@@ -1,0 +1,16 @@
+<div class='well hoverwell thumbnail'>
+    <div [routerLink]="['/details/', branch.id]" title="Click here to go to summary">
+        <h2>{{branch?.name}}</h2>
+        <img [src]="branch?.imageUrl" [alt]="branch?.name" [title]="branch?.name + ' seal'" class='branch-image' style='height: 100px'>
+        <div class="motto">{{ branch?.motto }}</div>  
+    </div>
+    <br/>
+    <div style="text-align: center">
+        <button class='btn btn-success' (click)="handleUpVoteClick(branch)">UP</button>
+        &nbsp;
+        <button type="button" class='btn btn-danger' (click)="handleDownVoteClick(branch)">DOWN</button>
+    </div>
+</div>
+ 
+
+   

@@ -1,0 +1,13 @@
+<div>
+    <h1>Branches of the US Military</h1>
+    <hr>
+    <div class="row">
+        <div *ngFor="let branch of branches" class="col-md-3 container">
+            <branch-thumbnail 
+                [branch]="branch"
+                (upVoteClick)="handleUpVoteClick(branch)"
+                (downVoteClick)="handleDownVoteClick(branch)">
+            </branch-thumbnail>   
+        </div>
+    </div>
+</div>
