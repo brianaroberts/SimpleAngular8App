@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BranchService } from '../BranchComponents/branch.service';
+import { AuthService } from '../user/auth.service'; 
 
 @Component({
     selector: 'nav-bar',
@@ -13,7 +14,7 @@ import { BranchService } from '../BranchComponents/branch.service';
 export class NavBarComponent {
     branches:any
 
-    constructor(private branchService:BranchService) {
+    constructor(private branchService:BranchService, public authService:AuthService) {
     }
 
     ngOnInit() {

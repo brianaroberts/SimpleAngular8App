@@ -18,6 +18,7 @@ import {
 
 import { AppFooterComponent } from './appFooter.component';
 import { Error404Component } from './errors/404.component';
+import { AuthService } from './user/auth.service';
 
 @NgModule({
   // Components, Pipes, and directives go here!
@@ -37,8 +38,10 @@ import { Error404Component } from './errors/404.component';
     HttpClientModule    
   ],
   // You add your servvices here!
+  // Provider Moddules can be used in all your modules for App. This is not true of declarations and imports. 
   providers: [
     BranchService,
+    AuthService,
     BranchRouteActivator,
     BranchesResolver,
     ToastrService
