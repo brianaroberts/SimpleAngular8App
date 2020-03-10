@@ -4,7 +4,7 @@
     <div class="col-md-4">
     <!-- Login Form has a lot of content, if we just pass in value we get the input values within the form. -->
     <form #loginForm="ngForm" autocomplete="off" (ngSubmit)="login(loginForm.value)" novalidate>
-        <div class="form-group" >
+        <div class="form-group">
         <label for="userName">User Name:</label>
         <em *ngIf="loginForm.controls.userName?.invalid && (loginForm.controls.userName?.touched || mouseoverLogin)">Required</em>
         <!-- ngModle gives you extra ngForm related functionality -->
@@ -25,20 +25,20 @@
     </form>
     </div>
     <div class="col-md-3" style="padding-left:25px">
-        loginForm.controls.invalid:<br/>
-        loginForm.controls.valid:<br/>
-        loginForm.controls.dirty:<br/>
-        loginForm.controls.pristine:<br/>
-        loginForm.controls.touched:<br/>
-        loginForm.controls.untouched:<br/>   
+        loginForm.control.invalid:<br/>
+        loginForm.control.valid:<br/>
+        loginForm.control.dirty:<br/>
+        loginForm.control.pristine:<br/>
+        loginForm.control.touched:<br/>
+        loginForm.control.untouched:<br/>   
     </div>
     <div class="col-md-1">
-        {{loginForm.controls.valid}}<br/>
-        {{loginForm.controls.invalid}}<br/>
-        {{loginForm.controls.dirty}}<br/>
-        {{loginForm.controls.pristine}}<br/>
-        {{loginForm.controls.touched}}<br/>
-        {{loginForm.controls.untouched}}<br/>    
+        {{loginForm.control.valid}}<br/>
+        {{loginForm.control.invalid}}<br/>
+        {{loginForm.control.dirty}}<br/>
+        {{loginForm.control.pristine}}<br/>
+        {{loginForm.control.touched}}<br/>
+        {{loginForm.control.untouched}}<br/>    
     </div>
     <div class="col-md-3" style="padding-left:25px">
         loginForm.controls.userName?.valid:<br/>
