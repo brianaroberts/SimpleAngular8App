@@ -8,13 +8,13 @@
         <label for="userName">User Name:</label>
         <em *ngIf="loginForm.controls.userName?.invalid && (loginForm.controls.userName?.touched || mouseoverLogin)">Required</em>
         <!-- ngModle gives you extra ngForm related functionality -->
-        <input (ngModel)="userName" id="userName" type="text" class="form-control" 
+        <input (ngModel)="userName" name="userName" id="userName" type="text" class="form-control" 
             required placeholder="User Name..." />
         </div>
         <div class="form-group" >
         <label for="password">Password:</label>
         <em *ngIf="loginForm.controls.password?.invalid && (loginForm.controls.password?.touched || mouseoverLogin)">Required</em>
-        <input (ngModel)="password" id="password" type="password" class="form-control"
+        <input (ngModel)="password" name="password" id="password" type="password" class="form-control"
             required placeholder="Password..." />
         </div>
             
@@ -33,8 +33,8 @@
         loginForm.control.untouched:<br/>   
     </div>
     <div class="col-md-1">
-        {{loginForm.control.valid}}<br/>
         {{loginForm.control.invalid}}<br/>
+        {{loginForm.control.valid}}<br/>
         {{loginForm.control.dirty}}<br/>
         {{loginForm.control.pristine}}<br/>
         {{loginForm.control.touched}}<br/>
@@ -56,7 +56,7 @@
         loginForm.controls.password?.touched:<br/>
         loginForm.controls.password?.untouched:<br/>
     </div>
-    <div class="col-md-2" style="padding-left:30px">
+    <div class="col-md-1" style="padding-left:30px">
         {{loginForm.controls.userName?.valid}}<br/>
         {{loginForm.controls.userName?.invalid}}<br/>
         {{loginForm.controls.userName?.dirty}}<br/>
