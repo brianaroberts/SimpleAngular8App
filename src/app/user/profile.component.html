@@ -2,18 +2,49 @@
   <h1>Edit Your Profile </h1>
   <hr>
   <div class="col-md-4">
-    <form autocomplete="off" novalidate>
-      <div class="form-group">
+    <form [formGroup]="profileForm" (ngSubmit)="saveProfile(profileForm.value)" autocomplete="off" novalidate>
+      <div class="form-group" [ngClass]="{'error' : !validateRequired(profileForm.controls.firstName) }">
         <label for="firstName">First Name:</label>
-        <input id="firstName" type="text" class="form-control" placeholder="First Name..." />
+        <em *ngIf="!validateRequired(profileForm.controls.firstName)">Required</em>
+        <input formControlName="firstName" id="firstName" type="text" class="form-control" placeholder="First Name..." />
       </div>
-      <div class="form-group">
+      <div class="form-group" [ngClass]="{'error' : !validateRequired(profileForm.controls.lastName) }">
         <label for="lastName">Last Name:</label>
-        <input id="lastName" type="text" class="form-control" placeholder="Last Name..." />
+        <em *ngIf="!validateRequired(profileForm.controls.lastName)">Required</em>
+        <input formControlName="lastName" id="lastName" type="text" class="form-control" placeholder="Last Name..." />
       </div>
-
+      <div class="form-group" [ngClass]="{'error' : !validateRequired(profileForm.controls.emailAddress) }">
+        <label for="emailAddress">Email:</label>
+        <em *ngIf="!validateRequired(profileForm.controls.emailAddress)">Required</em>
+        <input formControlName="emailAddress" id="emailAddress" type="text" class="form-control" placeholder="Email Address..." />
+      </div>
+      <div class="form-group" [ngClass]="{'error' : !validateRequired(profileForm.controls.phoneNumber) }">
+        <label for="phoneNumber">Phone Number:</label>
+        <em *ngIf="!validateRequired(profileForm.controls.phoneNumber)">Required</em>
+        <input formControlName="phoneNumber" id="phoneNumber" type="text" class="form-control" placeholder="Phone Number..." />
+      </div>
+      <div class="form-group" [ngClass]="{'error' : !validateRequired(profileForm.controls.address) }">
+        <label for="address">Address:</label>
+        <em *ngIf="!validateRequired(profileForm.controls.address)">Required</em>
+        <input formControlName="address" id="address" type="text" class="form-control" placeholder="Address..." />
+      </div>
+      <div class="form-group" [ngClass]="{'error' : !validateRequired(profileForm.controls.city) }">
+        <label for="city">City:</label>
+        <em *ngIf="!validateRequired(profileForm.controls.city)">Required</em>
+        <input formControlName="city" id="city" type="text" class="form-control" placeholder="City..." />
+      </div>
+      <div class="form-group" [ngClass]="{'error' : !validateRequired(profileForm.controls.state) }">
+        <label for="state">State:</label>
+        <em *ngIf="!validateRequired(profileForm.controls.state)">Required</em>
+        <input formControlName="state" id="state" type="text" class="form-control" placeholder="State..." />
+      </div>
+      <div class="form-group" [ngClass]="{'error' : !validateRequired(profileForm.controls.zipCode) }">
+        <label for="zipCode">Zip Code:</label>
+        <em *ngIf="!validateRequired(profileForm.controls.zipCode)">Required</em>
+        <input formControlName="zipCode" id="zipCode" type="text" class="form-control" placeholder="Zip Code..." />
+      </div>
       <button type="submit" class="btn btn-primary">Save</button>      
-      <button type="button" class="btn btn-default">Cancel</button>
+      <button type="button" class="btn btn-default" (click)="handleCancel">Cancel</button>
     </form>
   </div>
 </div>

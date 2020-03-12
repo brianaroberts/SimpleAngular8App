@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
     styles: [`
 		.btn { border-radius: .55rem; margin-right: 10px}
 		em { float:right; color:#E05C65; padding-left:10px; }
+		.form-control { border-radius: .55rem}
     `]
 })
 
